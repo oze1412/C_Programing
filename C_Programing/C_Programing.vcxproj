@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="HelloWorld.c" />
     <ClCompile Include="IO.c" />
+    <ClCompile Include="operater_app.c" />
     <ClCompile Include="operator_base.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
