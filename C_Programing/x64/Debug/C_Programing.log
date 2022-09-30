@@ -1,2 +1,4 @@
-﻿  control.c
+﻿  time.c
+C:\Users\AnSG\source\repos\C_Programing\C_Programing\time.c(8,12): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+C:\Users\AnSG\source\repos\C_Programing\C_Programing\time.c(8,9): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
   C_Programing.vcxproj -> C:\Users\AnSG\source\repos\C_Programing\x64\Debug\C_Programing.exe
