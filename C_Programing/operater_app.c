@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int main(void)
+int main_operater_app(void)
 {
 	// sizeof();
 	

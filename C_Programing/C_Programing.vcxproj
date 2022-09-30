@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="control.c" />
     <ClCompile Include="HelloWorld.c" />
     <ClCompile Include="IO.c" />
     <ClCompile Include="operater_app.c" />
