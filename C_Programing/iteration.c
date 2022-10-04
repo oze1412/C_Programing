@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int main(void)
+int main_iteration(void)
 {
 	// while문 - 조건기반
 
