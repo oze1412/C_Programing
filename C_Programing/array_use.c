@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int main(void)
+int main_array_use(void)
 {
 	// 선택정렬로 알려진 버블정렬 구현 (실습 9-1)
 
