@@ -136,6 +136,7 @@
     <ClCompile Include="iteration.c" />
     <ClCompile Include="operater_app.c" />
     <ClCompile Include="operator_base.c" />
+    <ClCompile Include="pointer.c" />
     <ClCompile Include="time.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

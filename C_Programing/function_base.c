@@ -101,16 +101,16 @@ void PrintData(int factor)
 
 // 8
 
-int nInput = 100;
+//int nInput = 100;
+//
+//int TestFunc(void)
+//{
+//	printf("%d\n", nInput);
+//}
 
-int TestFunc(void)
-{
-	printf("%d\n", nInput);
-}
 
 
-
-int main(void)
+int main_function_base(void)
 {
 	// 1. ÇÔ¼ö
 
