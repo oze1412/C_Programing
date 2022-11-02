@@ -16,6 +16,8 @@ void ArrPrint(int* paList)
 
 int main(void)
 {
+	int aList[5] = { 40, 20, 50, 30, 10 };
+
 	// 직접지정, 간접지정
 
 	
@@ -38,11 +40,56 @@ int main(void)
 
 	// 포인터 사용법
 
-	/*int aList[5] = { 40, 20, 50, 30, 10 };
-	ArrPrint(aList);*/
+	/*ArrPrint(aList);*/
 
 
-	//
+	// 포인터와 배열
+
+	/*int* paList = aList;
+
+	paList + 1;			// 기준주소 + 정수(옵셋) -> 상대주소
+	*(paList + 1);		// int형 변수가 지정됨
+
+	*(paList + 1) = 5;	// paList[1] = 5;*/
+
+
+	// &, *
+
+	/*int* paList = aList;
+
+	printf("%p\n", aList);
+	printf("%p\n", aList + 1);
+	printf("%p\n", &aList[1]);*/
+
+
+	// 기준점 변경
+
+	/*int* paList = aList + 1;
+
+	paList[0] = 100;
+	printf("%d\n", aList[1]);
+
+	paList[-1] = 200;	// 가급적 사용 X, 포인터의 (+, -) 는 정수계열
+	printf("%d\n", aList[0]);*/
+
+
+	// 포인터 변수 반복문
+
+	int nTotal = 0;
+
+	for (int i = 0; i < 5; i++)
+		nTotal += aList[i];
+	printf("%d\n", nTotal);
+
+
+	int* pnData = aList;
+
+	while (pnData < aList + 5)	// 좋은 코드 X, 헷갈림
+	{
+		nTotal += *pnData;
+		pnData++;
+	}
+	printf("%d\n", nTotal);
 
 
 
