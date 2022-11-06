@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 
 // void (*)(int)
 void TestFunc(int nParam)
@@ -75,7 +77,7 @@ int main(void)
 
 	// 포인터 변수 반복문
 
-	int nTotal = 0;
+	/*int nTotal = 0;
 
 	for (int i = 0; i < 5; i++)
 		nTotal += aList[i];
@@ -89,9 +91,70 @@ int main(void)
 		nTotal += *pnData;
 		pnData++;
 	}
-	printf("%d\n", nTotal);
+	printf("%d\n", nTotal);*/
 
 
+	// 메모리 동적 할당
+
+	/*int* pList = NULL;
+	pList = malloc(sizeof(int) * 3);
+
+	pList[0] = 10;
+	pList[1] = 10;
+	pList[2] = 10;
+
+	*(((char*)pList) + 12) = 'A';	// buffer-overflow 발생, fd(경계)깨짐
+
+	free(pList);*/
+
+
+	// memset
+
+	/*int* pList = NULL;
+	pList = malloc(sizeof(int) * 3);
+	memset(pList, 0, sizeof(int) * 3);
+	
+	free(pList);*/
+
+	
+	// 메모리 복사
+
+	/*char szSrcBuf[12] = {"Hello"};
+	char szDstBuf[12] = { 0 };
+	char* pszData = NULL;
+
+	pszData = szSrcBuf;								// Shallow Copy
+	
+	memcpy(szDstBuf, szSrcBuf, sizeof(szDstBuf));*/	// Deep Copy
+	
+
+	// 메모리 비교
+
+	/*char szSrcBuf[12] = { "Hello" };
+	char szDstBuf[12] = { 0 };
+	char* pszData = NULL;
+
+	memcpy(szDstBuf, szSrcBuf, sizeof(szDstBuf));
+
+	if (memcmp(szSrcBuf, szDstBuf, sizeof(szSrcBuf)) == 0)
+		puts("Same");
+	else
+		puts("Diff");*/
+
+
+	// 주소 - 주소 == index
+
+	/*char szBuffer[12] = { "I am a boy." };
+	char* pszFound = strstr(szBuffer, "am");
+
+	int nIndex = pszFound - szBuffer;*/		// index
+
+	
+	// 자료형 - 부록
+
+	/*char szBuffer[12] = { "I am a girl." };
+	int nData = 1835081801;
+	puts(&nData);*/		// I am 출력
 
 	return 0;
 }

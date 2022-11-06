@@ -1,0 +1,20 @@
+﻿  array.c
+  array_use.c
+  control.c
+  function_base.c
+C:\Users\AnSG\source\repos\C_Programing\C_Programing\function_base.c(180,3): warning C4013: 'TestFunc'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  HelloWorld.c
+  IO.c
+C:\Users\AnSG\source\repos\C_Programing\C_Programing\IO.c(33,1): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+  iteration.c
+  operater_app.c
+C:\Users\AnSG\source\repos\C_Programing\C_Programing\operater_app.c(9,2): warning C4013: 'memset'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\AnSG\source\repos\C_Programing\C_Programing\operater_app.c(19,28): warning C4307: '+': 부호 있는 정수 계열 상수 오버플로입니다.
+  operator_base.c
+  pointer.c
+C:\Users\AnSG\source\repos\C_Programing\C_Programing\pointer.c(157,13): warning C4133: '함수': 'int *'과(와) 'const char *' 사이의 형식이 호환되지 않습니다.
+  time.c
+C:\Users\AnSG\source\repos\C_Programing\C_Programing\time.c(8,12): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+C:\Users\AnSG\source\repos\C_Programing\C_Programing\time.c(8,9): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+  코드를 생성하고 있습니다...
+  C_Programing.vcxproj -> C:\Users\AnSG\source\repos\C_Programing\Debug\C_Programing.exe
