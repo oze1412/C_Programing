@@ -16,13 +16,55 @@ void ArrPrint(int* paList)
 	putchar('\n');
 }
 
+void PrintUser(char (*pUser)[12])
+{
+	for (int i = 0; i < 3; i++)
+		puts(pUser[i]);
+}
+
+void StaticPrint(void)
+{
+	static int nData = 10;		// 지역변수
+	printf("%d\n", nData++);
+}
+
+int GetLength(char* str)
+{
+	int i = 0, len = 0;
+
+	while (str[i] != '\0')
+	{
+		len++;
+		i++;
+	}
+
+	return len;
+}
+
+char* MyStrrev(char* str)
+{
+	int str_len = GetLength(str);
+	char* cpy_str = NULL;
+
+	cpy_str = (char*)malloc(str_len + 1);
+	strcpy_s(cpy_str, str_len + 1, str);
+
+	for (int i = 0; i < str_len; i++)
+		str[i] = cpy_str[str_len - 1 - i];
+
+	free(cpy_str);
+
+	return str;
+}
+
+
 int main(void)
 {
 	int aList[5] = { 40, 20, 50, 30, 10 };
 
 	// 직접지정, 간접지정
 
-	
+
 	/*int nData = 300;			// 직접지정
 	printf("%d\n", nData);
 
@@ -35,7 +77,7 @@ int main(void)
 
 	// 함수 이름 == 주소
 
-	
+
 	/*TestFunc(10);						// High Level
 	((void(*)(int))(&TestFunc))(20);*/	// Low Level
 
@@ -113,10 +155,10 @@ int main(void)
 	/*int* pList = NULL;
 	pList = malloc(sizeof(int) * 3);
 	memset(pList, 0, sizeof(int) * 3);
-	
+
 	free(pList);*/
 
-	
+
 	// 메모리 복사
 
 	/*char szSrcBuf[12] = {"Hello"};
@@ -124,9 +166,9 @@ int main(void)
 	char* pszData = NULL;
 
 	pszData = szSrcBuf;								// Shallow Copy
-	
+
 	memcpy(szDstBuf, szSrcBuf, sizeof(szDstBuf));*/	// Deep Copy
-	
+
 
 	// 메모리 비교
 
@@ -150,16 +192,104 @@ int main(void)
 	int nIndex = pszFound - szBuffer;*/		// index
 
 
-	// 
+	// 다차원 배열에 대한 포인터
 
+	/*char aListUser[3][12] = {
+		"철수",
+		"길동",
+		"영희"
+	};
+
+	PrintUser(aListUser);*/
+
+
+	// staic 정적변수
+
+	/*StaticPrint();
+	StaticPrint();
+	StaticPrint();*/
+
+
+	// 연습문제 11-2
+
+	/*char strList[50] = { 0 };
+	gets_s(strList, sizeof(strList));
+
+	printf("%d\n", GetLength(strList));*/
+
+
+	// 연습문제 11-4
+
+	/*char revList[50] = { 0 };
+	gets_s(revList, sizeof(revList));
+
+	MyStrrev(revList);
+
+	printf("%s\n", revList);*/
+
+
+	// 연습문제 11-5 (1)
+
+	/*char memo_story[50] = { 0 };
+	char* memo_list = NULL, * tmp_plist = NULL;
+
+	gets_s(memo_story, sizeof(memo_story));
+
+	int len_1 = GetLength(memo_story);
+	memo_list = (char*)malloc(len_1 + 1);
+
+	strcpy_s(memo_list, len_1 + 1, memo_story);
+
+	printf("%s\n", memo_list);
+
+	gets_s(memo_story, sizeof(memo_story));
+
+	int len_2 = GetLength(memo_story);
+	int len_sum = len_1 + len_2;
+	tmp_plist = (char*)realloc(memo_list, len_sum + 1);
+	if (tmp_plist != NULL)
+		memo_list = tmp_plist;
+
+	strcpy_s(&memo_list[len_1], len_2 + 1, memo_story);
+
+	printf("%s\n", memo_list);
+
+	free(memo_list);*/
+
+
+	// 연습문제 11-6
+	
+	/*char** str_list = NULL;
+	int str_num = 0, str_len = 0, i = 0;
+	
+	printf("문자열 개수 : ");
+	scanf_s("%d", &str_num);
+	
+	printf("문자 최대 길이 : ");
+	scanf_s("%d", &str_len);
+
+	str_list = (char**)malloc(sizeof(char*) * str_num);		// malloc의 크기는 "자료형 * 개수"
+
+	for (i = 0; i < str_num; i++)
+		str_list[i] = (char*)malloc(str_len + 1);
+
+	for (i = 0; i < str_num; i++)
+	{
+		scanf_s("%s", str_list[i], str_len + 1);
+		printf("%s\n", str_list[i]);
+	}
+
+	for (i = 0; i < str_num; i++)
+		free(str_list[i]);
+	free(str_list);*/
 
 
 	// 부록 1
 
-	int nData = 10;
+	/*int nData = 10;
 	*(int*)&nData = 20;		// &nData 가 stack 영역이라면 가능
 	printf("%d\n", nData);
-	printf("%d\n", *(int*)&nData);
+	printf("%d\n", *(int*)&nData);*/
 
 
 	// 자료형 - 부록2
