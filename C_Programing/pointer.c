@@ -149,8 +149,20 @@ int main(void)
 
 	int nIndex = pszFound - szBuffer;*/		// index
 
-	
-	// 자료형 - 부록
+
+	// 
+
+
+
+	// 부록 1
+
+	int nData = 10;
+	*(int*)&nData = 20;		// &nData 가 stack 영역이라면 가능
+	printf("%d\n", nData);
+	printf("%d\n", *(int*)&nData);
+
+
+	// 자료형 - 부록2
 
 	/*char szBuffer[12] = { "I am a girl." };
 	int nData = 1835081801;
