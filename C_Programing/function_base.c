@@ -169,7 +169,7 @@ int main_function_base(void)
 
 	// 8. 연습문제 10-5
 
-	int nInput = 0;
+	/*int nInput = 0;
 	scanf_s("%d", &nInput);
 
 	if (nInput > 10)
@@ -183,7 +183,7 @@ int main_function_base(void)
 			printf("%d\n", nInput);
 	}
 
-	printf("%d\n", nInput);
+	printf("%d\n", nInput);*/
 
 	return 0;
 }

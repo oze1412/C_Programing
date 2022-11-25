@@ -3,62 +3,62 @@
 #include<string.h>
 
 // void (*)(int)
-void TestFunc(int nParam)
-{
-	printf("TestFunc() : %d\n", nParam);
-}
+//void TestFunc(int nParam)
+//{
+//	printf("TestFunc() : %d\n", nParam);
+//}
+//
+//void ArrPrint(int* paList)
+//{
+//	for (int i = 0; i < 5; i++)
+//		printf("%d ", paList[i]);
+//
+//	putchar('\n');
+//}
+//
+//void PrintUser(char (*pUser)[12])
+//{
+//	for (int i = 0; i < 3; i++)
+//		puts(pUser[i]);
+//}
+//
+//void StaticPrint(void)
+//{
+//	static int nData = 10;		// 지역변수
+//	printf("%d\n", nData++);
+//}
+//
+//int GetLength(char* str)
+//{
+//	int i = 0, len = 0;
+//
+//	while (str[i] != '\0')
+//	{
+//		len++;
+//		i++;
+//	}
+//
+//	return len;
+//}
+//
+//char* MyStrrev(char* str)
+//{
+//	int str_len = GetLength(str);
+//	char* cpy_str = NULL;
+//
+//	cpy_str = (char*)malloc(str_len + 1);
+//	strcpy_s(cpy_str, str_len + 1, str);
+//
+//	for (int i = 0; i < str_len; i++)
+//		str[i] = cpy_str[str_len - 1 - i];
+//
+//	free(cpy_str);
+//
+//	return str;
+//}
 
-void ArrPrint(int* paList)
-{
-	for (int i = 0; i < 5; i++)
-		printf("%d ", paList[i]);
 
-	putchar('\n');
-}
-
-void PrintUser(char (*pUser)[12])
-{
-	for (int i = 0; i < 3; i++)
-		puts(pUser[i]);
-}
-
-void StaticPrint(void)
-{
-	static int nData = 10;		// 지역변수
-	printf("%d\n", nData++);
-}
-
-int GetLength(char* str)
-{
-	int i = 0, len = 0;
-
-	while (str[i] != '\0')
-	{
-		len++;
-		i++;
-	}
-
-	return len;
-}
-
-char* MyStrrev(char* str)
-{
-	int str_len = GetLength(str);
-	char* cpy_str = NULL;
-
-	cpy_str = (char*)malloc(str_len + 1);
-	strcpy_s(cpy_str, str_len + 1, str);
-
-	for (int i = 0; i < str_len; i++)
-		str[i] = cpy_str[str_len - 1 - i];
-
-	free(cpy_str);
-
-	return str;
-}
-
-
-int main(void)
+int main_Pointer(void)
 {
 	int aList[5] = { 40, 20, 50, 30, 10 };
 

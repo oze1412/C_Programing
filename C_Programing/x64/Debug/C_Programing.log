@@ -1,2 +1,6 @@
-﻿  pointer.c
+﻿  func_app.c
+C:\Users\AnSG\source\repos\C_Programing\C_Programing\func_app.c(89,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+C:\Users\AnSG\source\repos\C_Programing\C_Programing\func_app.c(89,9): message : 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+C:\Users\AnSG\source\repos\C_Programing\C_Programing\func_app.c(88,8): warning C4101: 'ch' :참조되지 않은 지역 변수입니다.
+C:\Users\AnSG\source\repos\C_Programing\C_Programing\func_app.c(22): warning C4172: 지역 변수 또는 임시: nData의 주소를 반환하고 있습니다.
   C_Programing.vcxproj -> C:\Users\AnSG\source\repos\C_Programing\x64\Debug\C_Programing.exe

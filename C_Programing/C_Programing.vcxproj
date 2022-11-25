@@ -131,6 +131,7 @@
     <ClCompile Include="array_use.c" />
     <ClCompile Include="control.c" />
     <ClCompile Include="function_base.c" />
+    <ClCompile Include="func_app.c" />
     <ClCompile Include="HelloWorld.c" />
     <ClCompile Include="IO.c" />
     <ClCompile Include="iteration.c" />
