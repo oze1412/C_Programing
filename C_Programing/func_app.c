@@ -50,7 +50,7 @@
 //	return nResult;
 //}
 
-int main(void)
+int main_func_app(void)
 {
 	// Call by reference
 
